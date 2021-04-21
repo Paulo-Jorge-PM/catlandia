@@ -67,6 +67,12 @@
 <br />
 <br />
 
+<button id="turn_off" style="padding:5px 10px;">Disable CSS</button>
+<button id="turn_on" style="padding:5px 10px;">Enable CSS</button>
+
+<br />
+<br />
+
 <div style="margin-right:360px;text-align:center;">
 <button type="button" onclick="playGame()" class="btn" style="font-size:42px;">Play a Cat Game!</button>
 </div>
@@ -117,6 +123,28 @@
 
 
 <!-- ======= Javascript ======= -->
+
+<!-- Enable / Disable CSS-->
+<script type="text/javascript">
+$(document).ready(function() {
+    $('button#turn_off').click(function(evt) {
+        evt.preventDefault();
+        var css = $('head').find('style[type="text/css"]').add('link[rel="stylesheet"]');
+        $('head').data('css', css);
+        css.remove();
+    });
+
+    $('button#turn_on').click(function(evt) {
+        evt.preventDefault();
+        var css = $('head').data('css');
+        console.info(css);
+        if (css) {
+            $('head').append(css); 
+        }
+    });
+});
+</script>
+
 
 <!-- scroll js for bg move - imported library, not mine -->
 <script src="static/js/jquery.bgscroll.js" type="text/javascript"></script>
