@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Catlandia</title>
     <meta name="author" content="Paulo Jorge Pereira Martins">
-    <meta name="description" content="TPC1 of PREI (MEI)">
+    <meta name="description" content="HTML, CSS, Javascript, JQuery">
     <meta name="keywords" content="paulo, mei, miei, prei, cats">
 
     <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
@@ -14,7 +14,7 @@
     <script src="static/js/jquery.js" type="text/javascript"></script>
     
     <meta property="og:title" content="Paulo Jorge PM - Homepage" />
-    <meta property="og:description" content="MEI - PREI - TPC1" />
+    <meta property="og:description" content="HTML, CSS, Javascript, JQuery" />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="static/images/cats/paiting4.png" />
 </head>
@@ -58,7 +58,9 @@
 <img src="static/images/cats/paiting4.png" style="float:right;padding:0px 0px 30px 30px;margin-top:60px;" />
 
 <div class="dialogue" style="margin-right:360px;">
-<p>Hi, my name is <strong>Cat Lisa</strong>. I am a cat angel, my objective is to help you getting fun - welcome! Meow meow &#128049;</p>
+<p>Hi, my name is <strong>Cat Lisa</strong>. I am a cat angel - welcome! Meow meow &#128049;</p>
+<p>My missions is to help you conquer the power of HTML, CSS, Javascript and JQuery.</p>
+<p>Please remeber: you can find the source-code for this demo at <a href="https://github.com/Paulo-Jorge-PM/catlandia" target="_blank">Git</a> or inspect it directly.</p>
 <p>Please tell me, what do you wish for?</p>
 </div>
 
@@ -217,7 +219,7 @@ $(document).on('click', '#head-cats', function(){
         $('.balloonsPoped').text(balloonsPoped);
         balloonSfx.load();
         balloonSfx.play();
-        //crescimento exponencial, por isso capar para não entupir o browser
+        //crescimento exponencial, por isso limitar para não entupir o browser
         if (n_cats - balloonsPoped < 50) {
             SPEED -= 100;
             newCat("cats"+Math.floor((Math.random() * 3) + 1), Math.floor((Math.random() * 350) + 1));
@@ -450,7 +452,7 @@ $("#addHTML").append(code);
 
 function addForm() {
 var submit = "Normalmente enviaria GET ou POST para o backend, mas neste caso não defini como submit, apenas um protótipo HTML que não faz nada";
-var code = '<br /><form action="#" method="get" style="border:2px solid #333333;border-radius:5px;padding:10px;"><b>Name:</b> <input type="text" value="" placeholder="Name" style="width:30%;" /> | <b>What you want me to add to this site?:</b> <select style="width:30%;"><option value="">Choose one...</option><option value="Backend">Backend: Python/Flask <3</option><option value="Server">Server: Nginx <3</option><option value="Database">Database: PostgreSQL</option><option value="ORM">ORM: SQLAlchemy</option></select><br /><br /><b>Address:</b> <textarea rows="4" style="width:100%;" placeholder="Address" ></textarea><br /><br /><b>Paulo deserve a good grade?</b> <input type="radio" name="teste" value="yes">Yes | <input type="radio" name="teste" value="no">No<br /><br /><button type="button" onclick="alert(\''+submit+'\')" class="btn">Submit</button> <input type="reset" class="btn" style="background:red;box-shadow:none;" /></form><br />';
+var code = '<br /><form action="#" method="get" style="border:2px solid #333333;border-radius:5px;padding:10px;"><b>Name:</b> <input type="text" value="" placeholder="Name" style="width:30%;" /> | <b>What you want me to add to this site?:</b> <select style="width:30%;"><option value="">Choose one...</option><option value="Backend">Backend: Python/Flask <3</option><option value="Server">Server: Nginx <3</option><option value="Database">Database: PostgreSQL</option><option value="ORM">ORM: SQLAlchemy</option></select><br /><br /><b>Address:</b> <textarea rows="4" style="width:100%;" placeholder="Address" ></textarea><br /><br /><b>This website is cool?</b> <input type="radio" name="teste" value="yes">Yes | <input type="radio" name="teste" value="no">No<br /><br /><b>What tech do you like?:</b> <input type="checkbox" id="html" name="html" value="HTML"><label for="html">HTML</label> | <input type="checkbox" id="css" name="css" value="CSS"><label for="css">CSS</label> | <input type="checkbox" id="js" name="js" value="JS"><label for="js">JS</label> | <input type="checkbox" id="jquery" name="jquery" value="JQuery"><label for="jquery">JQuery</label><br /><br /><button type="button" onclick="alert(\''+submit+'\')" class="btn">Submit</button> <input type="reset" class="btn" style="background:red;box-shadow:none;" /></form><br />';
 $("#addHTML").append(code);
 }
 
